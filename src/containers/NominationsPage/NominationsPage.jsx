@@ -10,12 +10,18 @@ const NominationsPage = () => {
   //const [loading, setLoading] = useState(true);
   // const [nominations, setNominations] = useState([]);
   // const [page, setPage] = useState(0);
-  const [search, setSearch] = useState('table');
+  const [search, setSearch] = useState('cat');
  
   const fetchMovies = () => {
+    console.log('test');
     findMovies(search).then((movies) => {
       setMovies(movies);
   })};
+
+  const handleSearch = ({ target }) => {
+    console.log(target.value);
+    setSearch(target.value), () => fetchMovies();
+  }
 
 
   useEffect(() => { 
@@ -24,7 +30,7 @@ const NominationsPage = () => {
 
   return(
     <>
-      <Search />
+      <Search search = {search} onChange = {handleSearch}/>
       <MoviesList movies = {movies} />
     </>
 

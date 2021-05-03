@@ -1,16 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Search = props => {
+const Search = ({ search, onChange }) => {
   return (
-    <div>
-      hello
-    </div>
+    <input
+      type="text"
+      placeholder="Search For A Movie!"
+      value={search}
+      onChange={onChange}
+    />
   )
 }
 
 Search.propTypes = {
-
+  search: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
 }
 
 export default Search
