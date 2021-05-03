@@ -1,27 +1,35 @@
 import React, { useEffect, useState } from 'react'
-import MoviesList from '../../components/app/Movies/MoviesList';
+import MoviesList from '../../components/Movies/MoviesList';
+import Search from '../../components/Search/Search';
 import { findMovies } from '../../services/movieAPI';
 
 const NominationsPage = () => {
 
  
   const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
+  //const [loading, setLoading] = useState(true);
   // const [nominations, setNominations] = useState([]);
   // const [page, setPage] = useState(0);
-  // const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('table');
  
+  const fetchMovies = () => {
+    findMovies(search).then((movies) => {
+      setMovies(movies);
+  })};
+
 
   useEffect(() => { 
-    findMovies('ninja').then((movies) => {
-      setMovies(movies);
-      setLoading(false);
-    })
-  }, [])
+    fetchMovies();
+    }, []);
 
+  return(
+    <>
+      <Search />
+      <MoviesList movies = {movies} />
+    </>
 
-  if(loading) return <ul>Loading</ul>;
-  return <MoviesList movies = {movies} />;
+  )
+
 }
 
 

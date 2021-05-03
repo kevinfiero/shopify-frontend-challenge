@@ -1,13 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styles from './Movie.css'
 
 const Movie = ({ title, year, id, poster}) => (
-    <>
-      <h3>{title}</h3>
-      <h3>{year}</h3>
-      <h3>{id}</h3>
-      <h3>{poster}</h3>
-    </>
+    <div className={styles.Movie}>
+      <img src={poster}/>
+      <div className={styles.Contents}>
+        <h3>{title}</h3>
+        <h3>{year}</h3>
+        <button> Nominate </button>
+      </div>
+
+    </div>
   
 )
 
