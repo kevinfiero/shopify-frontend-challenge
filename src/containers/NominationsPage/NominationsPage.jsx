@@ -13,12 +13,18 @@ const NominationsPage = () => {
   const [search, setSearch] = useState('');
  
   const fetchMovies = () => {
+    if(search.length < 2){
+      setMovies([]);
+    } else {
     findMovies(search).then((movies) => {
       setMovies(movies);
-  })};
+      })
+    }
+
+
+};
 
   const handleSearch = ({ target }) => {
-    console.log(target.value);
     setSearch(target.value), () => fetchMovies();
   }
 
