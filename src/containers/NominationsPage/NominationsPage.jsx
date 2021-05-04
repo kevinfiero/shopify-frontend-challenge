@@ -35,6 +35,10 @@ const NominationsPage = () => {
     setNominations([...nominations, JSON.parse(target.value)]);
   }
 
+  const handleRemove = ({ target }) => {
+    setNominations(nominations.filter(element => element.id !== target.value));
+  }
+
   useEffect(() => { 
     fetchMovies();
     }, [search]);
@@ -44,7 +48,7 @@ const NominationsPage = () => {
       <Search search = {search} onChange = {handleSearch}/>
       <div className={styles.Columns}>
         <MoviesList movies = {movies} nominations = {nominations} onClick={handleNomination} />
-        <NominationList nominations = {nominations} />
+        <NominationList nominations = {nominations} onClick={handleRemove} />
       </div>
 
     </>

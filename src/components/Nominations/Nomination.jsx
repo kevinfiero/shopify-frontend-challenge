@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Nomination.css'
 
-const Nomination = ({ nomination }) => (
+const Nomination = ({ nomination, onClick }) => (
 
   <div className={styles.Nomination}>
   <img src={nomination.poster}/>
@@ -10,7 +10,8 @@ const Nomination = ({ nomination }) => (
     <h3>{nomination.title}</h3>
     <h3>{nomination.year}</h3>
     <button 
-    value = {JSON.stringify(nomination)}
+    value = {nomination.id}
+    onClick={onClick}
     > Remove </button>
   </div>
 </div>

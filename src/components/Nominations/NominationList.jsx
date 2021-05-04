@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import styles from './NominationList.css'
 import Nomination from './Nomination'
 
-const NominationList = ({ nominations }) => {
+const NominationList = ({ nominations, onClick }) => {
 
   const nominationElements = nominations.map((nomination) => (
 
     <li key={nomination.id} className={styles.NominationList}>
-      <Nomination nomination = {nomination} />
+      <Nomination nomination = {nomination} onClick={onClick} />
     </li>
 
 ))
