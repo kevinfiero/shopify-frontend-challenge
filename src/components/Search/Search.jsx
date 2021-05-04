@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styles from './Search.css'
 
 const Search = ({ search, onChange }) => {
   return (
@@ -8,6 +9,7 @@ const Search = ({ search, onChange }) => {
       placeholder="Search For A Movie!"
       value={search}
       onChange={onChange}
+      className={styles.Search}
     />
   )
 }

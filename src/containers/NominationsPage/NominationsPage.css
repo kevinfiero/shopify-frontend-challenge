@@ -1,12 +1,12 @@
 .NominationsPage{
-
-
+  display: flex;
+  flex-direction: column;
 }
 
 
 .Columns{
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 30px;
   justify-content: center;
 }

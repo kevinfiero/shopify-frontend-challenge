@@ -9,10 +9,7 @@ const Nomination = ({ nomination, onClick }) => (
   <div className={styles.Contents}>
     <h3>{nomination.title}</h3>
     <h3>{nomination.year}</h3>
-    <button 
-    value = {nomination.id}
-    onClick={onClick}
-    > Remove </button>
+    <button value = {nomination.id} onClick={onClick}> Remove </button>
   </div>
 </div>
 

@@ -42,13 +42,13 @@ const NominationsPage = () => {
     }, [search]);
 
   return(
-    <>
+    <body className={styles.NominationsPage}>
       <Search search = {search} onChange = {handleSearch}/>
       <div className={styles.Columns}>
         <MoviesList movies = {movies} onClick={handleNomination} />
         <NominationList nominations = {nominations} onClick={handleRemove} />
       </div>
-    </>
+    </body>
   )
 
 }
