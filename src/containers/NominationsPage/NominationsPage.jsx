@@ -8,13 +8,11 @@ import styles from './NominationsPage.css'
 
 const NominationsPage = () => {
 
- 
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState('');
   const [nominations, setNominations] = useState([]);
   //const [loading, setLoading] = useState(true);
   // const [page, setPage] = useState(0);
-
  
   const fetchMovies = () => {
     if(search.length < 2){

@@ -8,3 +8,18 @@
   padding: 0rem;
   
 }
+
+
+.NoSearch{
+  display: inline-block;
+  border: black 1px solid;
+  height: 152px;
+  width: 402px;
+  text-align: center;
+  vertical-align: center;
+  justify-content: center;
+  align-content: center;
+  line-height: 152px;
+  margin-top: 1rem;
+  padding: 0rem;
+}

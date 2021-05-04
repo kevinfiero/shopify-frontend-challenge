@@ -7,4 +7,6 @@
 .Columns{
   display: flex;
   flex-direction: row;
+  gap: 12px;
+  justify-content: center;
 }

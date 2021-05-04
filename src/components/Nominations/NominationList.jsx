@@ -13,7 +13,12 @@ const NominationList = ({ nominations, onClick }) => {
 
 ))
 
-return <ul className={styles.NominationList}>{nominationElements}</ul>
+  if(nominationElements.length !== 0){
+    return <ul className={styles.NominationList}>{nominationElements}</ul>
+  } else {
+    return <div className={styles.NoNominations}>No Current Nominations!</div>
+  }
+
 }
 
 NominationList.propTypes = {

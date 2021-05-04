@@ -13,7 +13,11 @@ const MoviesList = ({ movies, onClick }) => {
 
   ))
 
-  return <ul className={styles.MovieList}>{movieElements}</ul>
+  if(movieElements.length !== 0){
+    return <ul className={styles.MovieList}>{movieElements}</ul>
+  } else {
+    return <div className={styles.NoSearch}>Please Enter A Valid Search Term</div>
+  }
   
 }
 
