@@ -14,7 +14,11 @@ const NominationList = ({ nominations, onClick }) => {
 ))
 
   if(nominationElements.length !== 0){
-    return <ul className={styles.NominationList}>{nominationElements}</ul>
+    return (
+    <div className={styles.Columns}>
+      <h2>Current Nominees</h2>
+      <ul className={styles.NominationList}>{nominationElements}</ul>
+    </div>)
   } else {
     return <div className={styles.NoNominations}>No Current Nominations!</div>
   }

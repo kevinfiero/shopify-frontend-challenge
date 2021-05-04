@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import MoviesList from '../../components/Movies/MoviesList';
-import Nomination from '../../components/Nominations/Nomination';
 import NominationList from '../../components/Nominations/NominationList';
+import Information from '../../components/Notifications/Information';
 import Search from '../../components/Search/Search';
 import { findMovies } from '../../services/movieAPI';
 import styles from './NominationsPage.css'
@@ -22,14 +22,13 @@ const NominationsPage = () => {
       setMovies(movies);
       })
     }
-};
+  };
 
   const handleSearch = ({ target }) => {
     setSearch(target.value), () => fetchMovies();
   }
 
   const handleNomination = ({ target }) => {
-    console.log(target.value)
     setNominations([...nominations, JSON.parse(target.value)]);
   }
 
@@ -42,13 +41,14 @@ const NominationsPage = () => {
     }, [search]);
 
   return(
-    <body className={styles.NominationsPage}>
+    <div className={styles.NominationsPage}>
+      <Information nominationCounter = {nominations.length}/>
       <Search search = {search} onChange = {handleSearch}/>
       <div className={styles.Columns}>
-        <MoviesList movies = {movies} onClick={handleNomination} />
+        <MoviesList movies = {movies} nominations = {nominations} onClick={handleNomination} />
         <NominationList nominations = {nominations} onClick={handleRemove} />
       </div>
-    </body>
+    </div>
   )
 
 }

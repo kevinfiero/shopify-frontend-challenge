@@ -5,7 +5,6 @@
   border: black 1px solid;
   width: 25rem;
 
-
   h3{
     word-wrap: break-word;
     overflow: hidden;
@@ -29,6 +28,20 @@
 
 .Contents{
   margin-left: 20px;
+}
+
+.ButtonAvailable{
+
+
+}
+
+.ButtonUnavailable{
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 

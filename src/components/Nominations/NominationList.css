@@ -11,7 +11,6 @@
 
 .NoNominations{
   display: inline-block;
-  border: black 1px solid;
   height: 152px;
   width: 402px;
   text-align: center;
@@ -21,4 +20,14 @@
   line-height: 152px;
   margin-top: 1rem;
   padding: 0rem;
+}
+
+.Columns{
+  display: flex;
+  flex-direction: column;
+
+  h2{
+    align-self: center;
+    text-align: center;
+  }
 }
