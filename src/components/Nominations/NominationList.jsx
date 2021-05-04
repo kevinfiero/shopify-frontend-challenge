@@ -22,8 +22,8 @@ NominationList.propTypes = {
     year: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     poster: PropTypes.string.isRequired
-  }))
-
+  })),
+  onClick: PropTypes.func.isRequired
 }
 
 export default NominationList

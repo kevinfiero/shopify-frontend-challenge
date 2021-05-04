@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import Movie from './Movie'
 import styles from './MovieList.css'
 
-const MoviesList = ({ movies, nominations, onClick }) => {
+const MoviesList = ({ movies, onClick }) => {
 
   const movieElements = movies.map((movie) => (
 
       <li key={movie.id} className={styles.MovieList}>
-        <Movie movie = {movie} nominations = {nominations} onClick = {onClick} />
+        <Movie movie = {movie} onClick = {onClick} />
       </li>
 
   ))
@@ -23,7 +23,8 @@ MoviesList.propTypes = {
     year: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     poster: PropTypes.string.isRequired
-  }))
+  })),
+  onClick: PropTypes.func.isRequired
 }
 
 export default MoviesList

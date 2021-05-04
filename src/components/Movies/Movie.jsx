@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Movie.css'
 
-const Movie = ({ movie, nominations, onClick}) => (
+const Movie = ({ movie, onClick}) => (
     <div className={styles.Movie}>
       <img src={movie.poster}/>
       <div className={styles.Contents}>
@@ -21,7 +21,8 @@ Movie.propTypes = {
     year: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     poster: PropTypes.string.isRequired
-  })
+  }),
+  onClick: PropTypes.func.isRequired
 }
 
 export default Movie

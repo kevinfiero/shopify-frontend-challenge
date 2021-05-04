@@ -47,14 +47,12 @@ const NominationsPage = () => {
     <>
       <Search search = {search} onChange = {handleSearch}/>
       <div className={styles.Columns}>
-        <MoviesList movies = {movies} nominations = {nominations} onClick={handleNomination} />
+        <MoviesList movies = {movies} onClick={handleNomination} />
         <NominationList nominations = {nominations} onClick={handleRemove} />
       </div>
-
     </>
   )
 
 }
-
 
 export default NominationsPage
