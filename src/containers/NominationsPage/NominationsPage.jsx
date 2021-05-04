@@ -4,6 +4,7 @@ import Nomination from '../../components/Nominations/Nomination';
 import NominationList from '../../components/Nominations/NominationList';
 import Search from '../../components/Search/Search';
 import { findMovies } from '../../services/movieAPI';
+import styles from './NominationsPage.css'
 
 const NominationsPage = () => {
 
@@ -41,7 +42,7 @@ const NominationsPage = () => {
   return(
     <>
       <Search search = {search} onChange = {handleSearch}/>
-      <div>
+      <div className={styles.Columns}>
         <MoviesList movies = {movies} nominations = {nominations} onClick={handleNomination} />
         <NominationList nominations = {nominations} />
       </div>

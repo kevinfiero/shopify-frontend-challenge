@@ -1,0 +1,10 @@
+.NominationsPage{
+
+
+}
+
+
+.Columns{
+  display: flex;
+  flex-direction: row;
+}
