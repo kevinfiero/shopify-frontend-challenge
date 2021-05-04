@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import MoviesList from '../../components/Movies/MoviesList';
+import Nomination from '../../components/Nominations/Nomination';
+import NominationList from '../../components/Nominations/NominationList';
 import Search from '../../components/Search/Search';
 import { findMovies } from '../../services/movieAPI';
 
@@ -39,7 +41,11 @@ const NominationsPage = () => {
   return(
     <>
       <Search search = {search} onChange = {handleSearch}/>
-      <MoviesList movies = {movies} nominations = {nominations} onClick={handleNomination} />
+      <div>
+        <MoviesList movies = {movies} nominations = {nominations} onClick={handleNomination} />
+        <NominationList nominations = {nominations} />
+      </div>
+
     </>
   )
 

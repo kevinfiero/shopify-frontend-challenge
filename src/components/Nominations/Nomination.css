@@ -1,0 +1,34 @@
+.Nomination{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  border: black 1px solid;
+  width: 25rem;
+
+
+  h3{
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 15rem;
+    height: 2.25rem;
+    font-size: 15px;
+
+  }
+  img{
+    width: 100px;
+    height: 150px;
+  }
+
+  button{
+    height: 20px;
+    width: 100px;
+  }
+
+}
+
+.Contents{
+  margin-left: 20px;
+}
+
+
