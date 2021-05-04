@@ -10,10 +10,9 @@ const NominationsPage = () => {
   //const [loading, setLoading] = useState(true);
   // const [nominations, setNominations] = useState([]);
   // const [page, setPage] = useState(0);
-  const [search, setSearch] = useState('cat');
+  const [search, setSearch] = useState('');
  
   const fetchMovies = () => {
-    console.log('test');
     findMovies(search).then((movies) => {
       setMovies(movies);
   })};
@@ -26,7 +25,7 @@ const NominationsPage = () => {
 
   useEffect(() => { 
     fetchMovies();
-    }, []);
+    }, [search]);
 
   return(
     <>

@@ -7,4 +7,6 @@ export const findMovies = search => {
       id: result.imdbID,
       poster: result.Poster
     })))
+    .then( res => res.filter((elem, index, self) => self.findIndex(
+      (t) => {return (t.id === elem.id)}) === index))
 }
