@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import Movie from './Movie'
 import styles from './MovieList.css'
 
-const MoviesList = ({ movies }) => {
+const MoviesList = ({ movies, nominations, onClick }) => {
 
   const movieElements = movies.map((movie) => (
 
       <li key={movie.id} className={styles.MovieList}>
-        <Movie {...movie} />
+        <Movie movie = {movie} nominations = {nominations} onClick = {onClick} />
       </li>
 
   ))

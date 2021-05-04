@@ -7,10 +7,11 @@ const NominationsPage = () => {
 
  
   const [movies, setMovies] = useState([]);
-  //const [loading, setLoading] = useState(true);
-  // const [nominations, setNominations] = useState([]);
-  // const [page, setPage] = useState(0);
   const [search, setSearch] = useState('');
+  const [nominations, setNominations] = useState([]);
+  //const [loading, setLoading] = useState(true);
+  // const [page, setPage] = useState(0);
+
  
   const fetchMovies = () => {
     if(search.length < 2){
@@ -20,14 +21,16 @@ const NominationsPage = () => {
       setMovies(movies);
       })
     }
-
-
 };
 
   const handleSearch = ({ target }) => {
     setSearch(target.value), () => fetchMovies();
   }
 
+  const handleNomination = ({ target }) => {
+    console.log(target.value)
+    setNominations([...nominations, JSON.parse(target.value)]);
+  }
 
   useEffect(() => { 
     fetchMovies();
@@ -36,9 +39,8 @@ const NominationsPage = () => {
   return(
     <>
       <Search search = {search} onChange = {handleSearch}/>
-      <MoviesList movies = {movies} />
+      <MoviesList movies = {movies} nominations = {nominations} onClick={handleNomination} />
     </>
-
   )
 
 }
