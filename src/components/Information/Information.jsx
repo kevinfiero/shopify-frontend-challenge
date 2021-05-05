@@ -11,10 +11,14 @@ const Information = ({ nominationCounter }) => {
 
   if(nominationCounter === 5){
     console.log(nominationCounter);
-    message =     
-      <h2 className={styles.Information}>
+    message =
+    <div className={styles.Information}>
+      <h2>
         Congrats! <br/><br/>You Nominated 5 Movies!
       </h2>
+      <button>Submit Nominees</button>
+    </div>
+
   }
 
   return(

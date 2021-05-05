@@ -31,11 +31,6 @@
   margin-left: 20px;
 }
 
-.ButtonAvailable{
-
-
-}
-
 .ButtonUnavailable{
   pointer-events: none;
   cursor: not-allowed;

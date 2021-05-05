@@ -2,4 +2,46 @@
   width: 500px;
   align-self: center;
   text-align: center;
+
+  button {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+  }
+  @-webkit-keyframes glowing {
+    0% { background-color: #90be6d; -webkit-box-shadow: 0 0 3px #90be6d; }
+    50% { background-color: #e9ff70; -webkit-box-shadow: 0 0 40px #e9ff70; }
+    100% { background-color: #90be6d; -webkit-box-shadow: 0 0 3px #90be6d; }
+  }
+  
+  @-moz-keyframes glowing {
+    0% { background-color: #90be6d; -moz-box-shadow: 0 0 3px #90be6d; }
+    50% { background-color: #e9ff70; -moz-box-shadow: 0 0 40px #e9ff70; }
+    100% { background-color: #90be6d; -moz-box-shadow: 0 0 3px #90be6d; }
+  }
+  
+  @-o-keyframes glowing {
+    0% { background-color: #90be6d; box-shadow: 0 0 3px #90be6d; }
+    50% { background-color: #e9ff70; box-shadow: 0 0 40px #e9ff70; }
+    100% { background-color: #90be6d; box-shadow: 0 0 3px #90be6d; }
+  }
+  
+  @keyframes glowing {
+    0% { background-color: #90be6d; box-shadow: 0 0 3px #90be6d; }
+    50% { background-color: #e9ff70; box-shadow: 0 0 40px #e9ff70; }
+    100% { background-color: #90be6d; box-shadow: 0 0 3px #90be6d; }
+  }
 }

@@ -45,6 +45,7 @@ const NominationsPage = () => {
       toast('Please Remove A Movie To Nominate Another!', {
         style: {
           background: '#f94144',
+          color: 'white',
           border: '1px solid black',
           width: '1000px',
           height: '50px'
