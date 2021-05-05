@@ -10,3 +10,8 @@
   gap: 30px;
   justify-content: center;
 }
+
+.Test{
+  background-color: #28a745;
+  border-left: 8px solid #1f8838;
+}
