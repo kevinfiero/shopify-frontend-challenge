@@ -20,7 +20,7 @@ const NominationList = ({ nominations, onClick }) => {
       <ul className={styles.NominationList}>{nominationElements}</ul>
     </div>)
   } else {
-    return <div className={styles.NoNominations}>No Current Nominations!</div>
+    return <div className={styles.NoNominations}>No Current Nominations</div>
   }
 
 }

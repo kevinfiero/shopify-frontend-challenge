@@ -1,8 +1,8 @@
 .NominationsPage{
   display: flex;
   flex-direction: column;
+  background-color: #f2cc8f;
 }
-
 
 .Columns{
   display: flex;
@@ -11,7 +11,12 @@
   justify-content: center;
 }
 
-.Test{
-  background-color: #28a745;
-  border-left: 8px solid #1f8838;
+.Info{
+  display: flex;
+  flex-direction: column;
+  border: black 1px solid;
+  width: 500px;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #a4c3b2;
 }

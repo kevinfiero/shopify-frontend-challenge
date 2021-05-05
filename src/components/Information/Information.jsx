@@ -2,17 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Information.css'
 
-const Information = ({ nominationCounter }) => (
+const Information = ({ nominationCounter }) => {
 
-    <p className={styles.Information}>
-      Welcome to the movies nomination page! <br/>
-      Search for you favorite movies and nominate five of them to submit!  <br/>
-    
-      You currently have {nominationCounter} of 5 selected.
-    </p>
+  let message = 
+    <h2 className={styles.Information}>
+      Please Nominate {5 - nominationCounter} More Movies!
+    </h2>
 
-)
+  if(nominationCounter === 5){
+    console.log(nominationCounter);
+    message =     
+      <h2 className={styles.Information}>
+        Congrats! <br/><br/>You Nominated 5 Movies!
+      </h2>
+  }
 
+  return(
+    <>
+      {message}
+    </>
+
+  )
+}
 Information.propTypes = {
   nominationCounter: PropTypes.number.isRequired
 }
