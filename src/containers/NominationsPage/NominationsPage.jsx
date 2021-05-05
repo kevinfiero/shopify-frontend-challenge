@@ -21,10 +21,24 @@ const NominationsPage = () => {
     } else {
     findMovies(search).then((movies) => {
       setMovies(movies);
-      console.log(movies);
       })
     }
   };
+
+  const handleSubmit = () => {
+    toast('🔥 Thanks For You Submission! 🔥', {
+      style: {
+        background: '#2f6690',
+        color: 'white',
+        border: '1px solid black',
+      },
+      duration: 3000,
+    })
+
+    setTimeout(() => location.reload(), 3000);
+    
+
+  }
 
   const handleSearch = ({ target }) => {
     setSearch(target.value), () => fetchMovies();
@@ -33,22 +47,18 @@ const NominationsPage = () => {
   const handleNomination = ({ target }) => {
     if(nominations.length === 4){
       setNominations([...nominations, JSON.parse(target.value)]);
-      toast('Congrats! You Nominated 5 Movies!', {
+      toast('✨ Congrats! You Nominated 5 Movies! ✨', {
         style: {
           background: '#43aa8b',
           border: '1px solid black',
-          width: '1000px',
-          height: '50px'
         }
       })
     } else if (nominations.length === 5){
-      toast('Please Remove A Movie To Nominate Another!', {
+      toast('❌ You May Only Nominate 5 Movies. Please Remove A Nominee Before Adding Another! ❌', {
         style: {
           background: '#f94144',
           color: 'white',
           border: '1px solid black',
-          width: '1000px',
-          height: '50px'
         }
       })
     } else{
@@ -69,7 +79,7 @@ const NominationsPage = () => {
       <div className={styles.Info}>
         <Header />
         <Search search = {search} onChange = {handleSearch}/>
-        <Information nominationCounter = {nominations.length}/>
+        <Information nominationCounter = {nominations.length} onClick={handleSubmit}/>
       </div>
       <div className={styles.Columns}>
         <MoviesList movies = {movies} nominations = {nominations} onClick={handleNomination} />

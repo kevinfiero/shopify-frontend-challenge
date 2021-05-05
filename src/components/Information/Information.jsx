@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Information.css'
 
-const Information = ({ nominationCounter }) => {
+const Information = ({ nominationCounter, onClick }) => {
 
   let message = 
     <h2 className={styles.Information}>
@@ -16,7 +16,7 @@ const Information = ({ nominationCounter }) => {
       <h2>
         Congrats! <br/><br/>You Nominated 5 Movies!
       </h2>
-      <button>Submit Nominees</button>
+      <button onClick={onClick}>Submit Nominees</button>
     </div>
 
   }
@@ -29,7 +29,8 @@ const Information = ({ nominationCounter }) => {
   )
 }
 Information.propTypes = {
-  nominationCounter: PropTypes.number.isRequired
+  nominationCounter: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 export default Information
