@@ -26,7 +26,7 @@ const NominationsPage = () => {
   };
 
   const handleSubmit = () => {
-    toast('🔥 Thanks For You Submission! 🔥', {
+    toast('🔥 Thanks For Your Submission! 🔥', {
       style: {
         background: '#2f6690',
         color: 'white',
@@ -51,7 +51,8 @@ const NominationsPage = () => {
         style: {
           background: '#43aa8b',
           border: '1px solid black',
-        }
+        },
+        duration: 3000,
       })
     } else if (nominations.length === 5){
       toast('❌ You May Only Nominate 5 Movies. Please Remove A Nominee Before Adding Another! ❌', {
@@ -59,7 +60,8 @@ const NominationsPage = () => {
           background: '#f94144',
           color: 'white',
           border: '1px solid black',
-        }
+        },
+        duration: 3000,
       })
     } else{
       setNominations([...nominations, JSON.parse(target.value)]);
