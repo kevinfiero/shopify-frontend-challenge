@@ -1,5 +1,5 @@
 export const findMovies = search => {
-  return fetch(`http://www.omdbapi.com/?apikey=70cc810b&s=${search}&type=movie&page=1`)
+  return fetch(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${search}&type=movie&page=1`)
     .then( res => res.json())
     .then(( { Search } ) => Search.map(result => 
       {
