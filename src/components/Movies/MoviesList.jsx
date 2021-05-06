@@ -1,18 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Movie from './Movie'
-import styles from './MovieList.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Movie from './Movie';
+import styles from './MovieList.css';
 
 const MoviesList = ({ movies, nominations, onClick }) => {
 
-  const movieElements = movies.map((movie) => (
-
+  let movieElements = [];
+  if(movies){
+  movieElements = movies.map((movie) => (
       <li key={movie.id} className={styles.MovieList}>
         <Movie movie = {movie} nominations ={nominations} onClick = {onClick} />
       </li>
-
   ))
-
+  }
   if(movieElements.length !== 0){
     return (
       <div className={styles.Columns}>
@@ -22,7 +22,6 @@ const MoviesList = ({ movies, nominations, onClick }) => {
   } else {
     return <div className={styles.NoSearch}>Please Enter A Valid Search Term</div>
   }
-  
 }
 
 MoviesList.propTypes = {

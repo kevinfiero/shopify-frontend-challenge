@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import MoviesList from '../../components/Movies/MoviesList';
 import NominationList from '../../components/Nominations/NominationList';
 import Information from '../../components/Information/Information';
@@ -34,10 +34,7 @@ const NominationsPage = () => {
       },
       duration: 3000,
     })
-
     setTimeout(() => location.reload(), 3000);
-    
-
   }
 
   const handleSearch = ({ target }) => {
@@ -90,7 +87,6 @@ const NominationsPage = () => {
       <Toaster />
     </div>
   )
-
 }
 
 export default NominationsPage
