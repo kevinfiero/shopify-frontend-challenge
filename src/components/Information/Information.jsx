@@ -10,7 +10,6 @@ const Information = ({ nominationCounter, onClick }) => {
     </h2>
 
   if(nominationCounter === 5){
-    console.log(nominationCounter);
     message =
     <div className={styles.Information}>
       <h2>

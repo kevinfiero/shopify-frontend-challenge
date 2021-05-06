@@ -6,7 +6,7 @@ const Search = ({ search, onChange }) => {
   return (
     <input
       type="text"
-      placeholder="Search For A Movie!"
+      placeholder="Search For A Movie..."
       value={search}
       onChange={onChange}
       className={styles.Search}

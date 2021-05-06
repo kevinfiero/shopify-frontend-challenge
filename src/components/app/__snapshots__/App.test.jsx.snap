@@ -2,8 +2,54 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <h1>
-    Hello World
-  </h1>
+  <div
+    class="NominationsPage"
+  >
+    <div
+      class="Info"
+    >
+      <div
+        class="Header"
+      >
+        <h1>
+          The Shoppies Movie Nominations!
+        </h1>
+        <h3>
+          We need your help nominating movies! 
+          <br />
+          <br />
+           Please search for your favorites to nominate!
+        </h3>
+      </div>
+      <input
+        class="Search"
+        placeholder="Search For A Movie..."
+        type="text"
+        value=""
+      />
+      <h2
+        class="Information"
+      >
+        Please Nominate 5 More Movies!
+      </h2>
+    </div>
+    <div
+      class="Columns"
+    >
+      <div
+        class="NoSearch"
+      >
+        Please Enter A Valid Search Term
+      </div>
+      <div
+        class="NoNominations"
+      >
+        No Current Nominations
+      </div>
+    </div>
+    <div
+      style="position: fixed; z-index: 9999;"
+    />
+  </div>
 </DocumentFragment>
 `;

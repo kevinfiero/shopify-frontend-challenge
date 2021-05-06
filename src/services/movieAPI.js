@@ -5,11 +5,11 @@ export const findMovies = search => {
       {
 
         if(result.Poster==='N/A'){result.Poster = 'https://www.reelviews.net/resources/img/default_poster.jpg'}
-      return ({
-      title: result.Title,
-      year: result.Year,
-      id: result.imdbID,
-      poster: result.Poster
+        return ({
+        title: result.Title,
+        year: result.Year,
+        id: result.imdbID,
+        poster: result.Poster
     })
   }
     ))

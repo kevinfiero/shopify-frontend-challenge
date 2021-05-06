@@ -17,7 +17,7 @@ const MoviesList = ({ movies, nominations, onClick }) => {
     return (
       <div className={styles.Columns}>
         <h2>Search Results</h2>
-        <ul className={styles.MovieList}>{movieElements}</ul>
+        <ul data-testid="movies" className={styles.MovieList}>{movieElements}</ul>
       </div>)
   } else {
     return <div className={styles.NoSearch}>Please Enter A Valid Search Term</div>
