@@ -6,6 +6,44 @@ exports[`App component renders App 1`] = `
     class="NominationsPage"
   >
     <div
+      class="Contact"
+    >
+      <div
+        class="Contact"
+      >
+        <a
+          href="https://github.com/kevinfiero/shopify-frontend-challenge"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Github Icon"
+            src="/path/image"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kevinfiero/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="LinkedIn Icon"
+            src="/path/image"
+          />
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1mSVHxaBoMWGOkCQ73B6QaeRu9B4WWlkg/view"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Resume Icon"
+            src="/path/image"
+          />
+        </a>
+      </div>
+    </div>
+    <div
       class="Info"
     >
       <div

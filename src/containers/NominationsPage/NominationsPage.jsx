@@ -7,6 +7,7 @@ import { findMovies } from '../../services/movieAPI';
 import styles from './NominationsPage.css'
 import toast, { Toaster } from 'react-hot-toast';
 import Header from '../../components/Header/Header';
+import Contact from '../../components/Contact/Contact';
 
 
 const NominationsPage = () => {
@@ -75,6 +76,10 @@ const NominationsPage = () => {
 
   return(
     <div className={styles.NominationsPage}>
+      <div className={styles.Contact}>
+      <Contact  />
+
+      </div>
       <div className={styles.Info}>
         <Header />
         <Search search = {search} onChange = {handleSearch}/>

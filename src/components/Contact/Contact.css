@@ -1,0 +1,16 @@
+.Contact {
+  display:flex;
+  flex-direction: row;
+  width: 8em;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+
+  img{
+    width: 36px;
+    height: 36px;
+    padding: 0em;
+    margin: 0em;
+  }
+}
