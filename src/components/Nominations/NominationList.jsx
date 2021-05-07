@@ -17,7 +17,7 @@ const NominationList = ({ nominations, onClick }) => {
     return (
     <div className={styles.Columns}>
       <h2>Current Nominees</h2>
-      <ul className={styles.NominationList}>{nominationElements}</ul>
+      <ul data-testid="nominations" className={styles.NominationList}>{nominationElements}</ul>
     </div>)
   } else {
     return <div className={styles.NoNominations}>No Current Nominations</div>

@@ -21,8 +21,7 @@ const Movie = ({ movie, nominations, onClick}) => {
           value = {JSON.stringify(movie)}
           onClick={onClick}
           className={nominated ? styles.ButtonUnavailable : styles.ButtonAvailable}
-        > Nominate 
-        </button>
+        >Nominate</button>
       </div>
     </div>
   )
